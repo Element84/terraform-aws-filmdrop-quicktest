@@ -1,0 +1,10 @@
+*.out
+*.tfstate
+*.tfstate.*
+.terraform.lock*
+.terraform.lock.hcl
+.terraform.tfstate*
+.terraform/
+bin/terraform
+terraform-visual-report
+terraform.tgz
