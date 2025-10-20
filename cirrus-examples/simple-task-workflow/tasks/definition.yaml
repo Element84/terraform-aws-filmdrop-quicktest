@@ -1,4 +1,4 @@
-name: task
+name: simple-workflow-393024
 common_role_statements:
   - sid: ReadWriteCirrusDataBucket
     effect: Allow

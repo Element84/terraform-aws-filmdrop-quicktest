@@ -28,4 +28,6 @@ terraform apply
 
 ## Contributing
 
-We'd love to add a wide variety of fully-functioning Cirrus feeders/tasks/workflows, FilmDrop UI configuration files, etc. PRs welcome!
+PRs welcome!
+
+We'd love to add a wide variety of fully-functioning Cirrus feeders/tasks/workflows, FilmDrop UI configuration files, etc. See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
