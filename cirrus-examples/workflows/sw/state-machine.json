@@ -1,10 +1,10 @@
 {
   "Comment": "Lambda Test Workflow",
-  "StartAt": "c1-lambda",
+  "StartAt": "step1-lambda",
   "States": {
-    "c1-lambda": {
+    "step1-lambda": {
       "Type": "Task",
-      "Resource": "${tasks.c1-task.lambda.function_arn}",
+      "Resource": "${tasks.sw-task.lambda.function_arn}",
       "Retry": [
         {
           "ErrorEquals": [
