@@ -1,0 +1,17 @@
+{
+  "features": [
+    {
+      "id": "example-item2"
+    }
+  ],
+  "process": [
+    {
+      "id": "workflow-payload1",
+      "workflow": "sw-workflow",
+      "upload_options": {
+        "path_template": "this-should-be-a-data-bucket-eventually-but-it-doesnt-matter-for-the-wait-task/data/${collection}/${id}/"
+      },
+      "tasks": { }
+    }
+  ]
+}

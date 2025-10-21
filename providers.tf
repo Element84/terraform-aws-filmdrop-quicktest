@@ -1,16 +1,15 @@
 terraform {
   required_version = ">= 1.6.6"
 
-  # backend "s3" {
-  #   # Modify bucket and region to point to the S3 bucket you want to use for storing your Terraform state. This must
-  #   # exist in the AWS account you're deploying to.
-  #   bucket         = "my-bucket"
-  #   region         = "us-west-2"
+  backend "s3" {
+    # Modify bucket/region/keyto point to the S3 bucket you want to use for storing your Terraform state. This bucket
+    # must already exist in the AWS account you're deploying to
+    bucket         = "fd-jai-tf-state-91733293"
+    region         = "us-west-2"
+    key            = "lambdareqs/terraform.tfstate"
 
-  #   key            = "terraform.tfstate"
-  #   versioning     = true
-  #   use_lockfile   = true
-  # }
+    use_lockfile   = true
+  }
 
   required_providers {
     aws = {

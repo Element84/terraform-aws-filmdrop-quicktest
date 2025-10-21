@@ -1,0 +1,34 @@
+{
+  "Comment": "Lambda Test Workflow",
+  "StartAt": "step1-lambda",
+  "States": {
+    "step1-lambda": {
+      "Type": "Task",
+      "Resource": "${tasks.sw-task.lambda.function_arn}",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.TooManyRequestsException",
+            "Lambda.Unknown"
+          ],
+          "IntervalSeconds": 10,
+          "MaxDelaySeconds": 20,
+          "BackoffRate": 2.0,
+          "MaxAttempts": 1,
+          "JitterStrategy": "FULL"
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "failure"
+        }
+      ],
+      "End": true
+    },
+    "failure": {
+      "Type": "Fail"
+    }
+  }
+}
