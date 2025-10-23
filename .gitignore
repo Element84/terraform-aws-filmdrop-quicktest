@@ -1,6 +1,7 @@
 # Note that we don't ignore .zip files, reason being that for testing purposes you'll usually want to ensure that
 # others who are testing your code use the same .zip files that you do. They should probably not be committed to
 # main though
+*output
 *.out
 *.tfstate
 *.tfstate.*
